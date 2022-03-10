@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 
 const Navigation = () => {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg">
+    <Navbar variant="dark" expand="lg" className="navigation">
       <Container>
         <Navbar.Brand href="#home" className="fs-3">
           Q & A
