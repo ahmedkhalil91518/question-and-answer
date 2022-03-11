@@ -31,13 +31,14 @@
 
 .text-container {
   width: 60%;
-  height: 500px;
+  height: calc(100vh - 250px);
   background-color: white;
   position: absolute;
   top: 150px;
   left: 20%;
   right: 20%;
 }
+
 .shape2 {
   position: absolute;
   overflow: hidden;
@@ -62,43 +63,76 @@
   bottom: 0;
   z-index: 2;
 }
-.question-mark1 {
+
+.question-mark {
   z-index: 4;
   position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
   top: 70px;
-  right: 50%;
-  left: auto;
   color: rgb(110, 178, 224);
 }
-.question-mark2 {
-  z-index: 4;
-  position: absolute;
-  top: 70px;
-  right: 40%;
-  left: auto;
-  color: rgb(93, 161, 238);
-}
-.question-mark3 {
-  z-index: 4;
-  position: absolute;
-  top: 70px;
-  right: 60%;
-  left: auto;
-  color: rgba(0, 212, 255, 1);
-}
+
 .question-mark-container {
   position: relative;
   display: block;
   width: 100%;
 }
+
 .navigation {
-    background-color: rgb(67, 116, 172);
+  background-color: rgb(67, 116, 172);
 }
+
 .main-page {
-    color: rgb(0, 60, 139);
+  color: rgb(0, 60, 139);
 }
+
 .button {
-    background-color: rgb(67, 116, 172);
+  background-color: rgb(67, 116, 172);
 }
+
 .social {
+  position: absolute;
+  bottom: 50px;
+}
+
+.fa-facebook {
+  color: #0778e9;
+}
+
+.fa-twitter {
+  color: #1d9bf0;
+}
+
+@media (max-width: 850px) {
+  .text-container {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+
+  .main-page {
+    font-size: xx-large;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-container {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .main-page {
+    font-size: larger;
+  }
+
+  .social {
+    top: -140px;
+    z-index: 5;
+    left: -20px;
+  }
 }

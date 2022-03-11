@@ -8,9 +8,7 @@ function App() {
     <div>
       <Navigation />
       <div className=" question-mark-container">
-        <i class="fa-regular fa-circle-question fa-4x question-mark1 fa-bounce"></i>
-        <i class="fa-regular fa-circle-question fa-4x question-mark2 fa-bounce"></i>
-        <i class="fa-regular fa-circle-question fa-4x question-mark3 fa-bounce"></i>
+        <i class="fa-regular fa-circle-question fa-4x question-mark fa-bounce"></i>
       </div>
       <div className="shapes-container shadow">
         <div class="shape"></div>
@@ -29,11 +27,22 @@ function App() {
             Start
           </Button>{" "}
           <div className="social d-flex justify-content-start">
-          <a href="#"><i class="fa-brands fa-facebook mx-2 my-0 fa-2x"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter mx-2 my-0 fa-2x"></i></a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-facebook mx-2 my-0 fa-2x"></i>
+            </a>
+            <a
+              href="https://twitter.com/?lang=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-brands fa-twitter mx-2 my-0 fa-2x"></i>
+            </a>
+          </div>
         </div>
-        </div>
-
       </div>
     </div>
   );
