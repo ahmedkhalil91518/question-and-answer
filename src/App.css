@@ -136,3 +136,10 @@
     left: -20px;
   }
 }
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+.link:hover {
+  color: rgb(118, 173, 245);
+}
