@@ -25,7 +25,7 @@ function SignupContainer() {
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password"), ""], "Passwords must match")
       .required("Required"),
-    licenseCheckbox: Yup.array().min(1, 'Your error message')
+    licenseCheckbox: Yup.array().min(1, 'Required')
   });
   const onSubmit = (values) => {
     console.log("Form data", values);

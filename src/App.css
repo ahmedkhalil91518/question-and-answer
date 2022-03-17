@@ -146,3 +146,6 @@
 .signup-h1 {
   color: rgb(0, 60, 139);
 }
+.error {
+  color: red;
+}
