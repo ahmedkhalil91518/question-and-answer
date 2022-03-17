@@ -4,35 +4,31 @@ import * as Yup from "yup";
 import FormikControl from "./FormikControl";
 
 function SignupContainer() {
-  const licenseCheckbox = [
-    { key: "", value: "agreeLicense" },
-  ];
+  const licenseCheckbox = [{ key: "I accept the license terms agreement", value: "agreeLicense" }];
   const notificationsCheckbox = [
-    { key: "", value: "sendNotifications" },
+    { key: "send me notifications about new tests", value: "sendNotifications" },
   ];
   const initialValues = {
-    email: "",
-    description: "",
-    selectOption: "",
-    radioOption: "",
-    checkboxOption: [],
+    name: "",
     birthDate: null,
+    email: "",
+    password: "",
+    confirmPassword: "",
+    licenseCheckbox: [],
+    notificationsCheckbox: [],
   };
   const validationSchema = Yup.object({
-    email: Yup.string().required("Required"),
-    description: Yup.string().required("Required"),
-    selectOption: Yup.string().required("Required"),
-    radioOption: Yup.string().required("Required"),
-    checkboxOption: Yup.array().required("Required"),
+    name: Yup.string().required("Required"),
     birthDate: Yup.date().required("Required").nullable(),
+    email: Yup.string().email("Invalid email format").required("Required"),
     password: Yup.string().required("Required"),
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password"), ""], "Passwords must match")
       .required("Required"),
+    licenseCheckbox: Yup.array().min(1, 'Your error message')
   });
   const onSubmit = (values) => {
     console.log("Form data", values);
-    console.log("Saved data", JSON.parse(JSON.stringify(values)));
   };
 
   return (
@@ -67,19 +63,21 @@ function SignupContainer() {
             label="Confirm Password"
             name="confirmPassword"
           />
-                    <FormikControl
-            control='checkbox'
-            label='I accept the license tern agreement'
-            name='checkboxOption'
+          <FormikControl
+            control="checkbox"
+            label=""
+            name="licenseCheckbox"
             options={licenseCheckbox}
           />
-                    <FormikControl
-            control='checkbox'
-            label='send me notifications about new tests'
-            name='checkboxOption'
+          <FormikControl
+            control="checkbox"
+            label=""
+            name="notificationsCheckbox"
             options={notificationsCheckbox}
           />
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={!(formik.isValid && formik.dirty)}>
+            Signup
+          </button>
         </Form>
       )}
     </Formik>
