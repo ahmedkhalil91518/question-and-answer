@@ -5,7 +5,7 @@ import { FormControl } from "react-bootstrap";
 function CheckboxGroup(props) {
   const { label, name, options, ...rest } = props;
   return (
-    <div className="form-control">
+    <div className="my-4">
       <label>{label}</label>
       <Field name={name} as={FormControl}>
         {({ field }) => {
@@ -19,6 +19,7 @@ function CheckboxGroup(props) {
                   {...rest}
                   value={option.value}
                   checked={field.value.includes(option.value)}
+                  className="m-2"
                 />
                 <label htmlFor={option.value}>{option.key}</label>
               </React.Fragment>

@@ -2,8 +2,8 @@ import SignupContainer from "./SignupContainer";
 
 const Signup = () => {
   return (
-    <div className="text-center my-5">
-      <h1 className="signup-h1">Signup</h1>
+    <div className="my-5">
+      
       <SignupContainer />
     </div>
   );
