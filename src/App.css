@@ -129,6 +129,43 @@ label {
   margin-left: 10%;
 }
 
+.signin-img {
+  width: 18%;
+  margin-right: 10%;
+  margin-left: 5%;
+
+}
+
+.signin-form-container {
+  width: 48%;
+  margin-right: 2%;
+  margin-left: 20%;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link:hover {
+  color: rgb(118, 173, 245);
+}
+
+.signup-h1 {
+  color: rgb(0, 60, 139);
+}
+
+.error {
+  color: red;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999 !important;
+  background-color: #cccccc !important;
+  color: #666666 !important;
+}
+
 @media (max-width: 850px) {
   .text-container {
     width: 80%;
@@ -141,13 +178,20 @@ label {
     margin-left: 25%;
     margin-right: 25%;
   }
-
+  .signin-form-container {
+    width: 50%;
+    margin: 5%;
+  }
   .main-page {
     font-size: xx-large;
   }
 
   .signup-img {
     display: none;
+  }
+
+  .signin-img {
+    width: 30%;
   }
 }
 
@@ -173,21 +217,13 @@ label {
     margin-left: 15%;
     margin-right: 15%;
   }
-}
 
-.link {
-  text-decoration: none;
-  color: #fff;
-}
-
-.link:hover {
-  color: rgb(118, 173, 245);
-}
-
-.signup-h1 {
-  color: rgb(0, 60, 139);
-}
-
-.error {
-  color: red;
+  .signin-img {
+    display: none;
+  }
+  .signin-form-container {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
 }
