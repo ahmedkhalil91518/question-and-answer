@@ -40,6 +40,7 @@ const FrontPage = () => {
           </div>
         </div>
       </div>
+      <div className="line"></div>
     </div>
   );
 };

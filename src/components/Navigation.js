@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <Navbar variant="dark" expand="lg" className="navigation">
+    <Navbar variant="dark" expand="lg" className="navigation sticky-top">
       <Container>
         <Navbar.Brand className="fs-3">
           <Link to="/" className="link ">

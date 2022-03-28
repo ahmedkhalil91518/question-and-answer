@@ -3,7 +3,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import FormikControl from "./FormikControl";
 import { Button } from "react-bootstrap";
-
+import Footer from "./Footer";
 function Signup() {
   const licenseCheckbox = [
     { key: "I accept the license terms agreement", value: "agreeLicense" },
@@ -38,78 +38,87 @@ function Signup() {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
-    >
-      {(formik) => (
-        <div className="d-flex flex-row my-5">
-          <img src="./18915856.jpg" alt="" className="signup-img"/>
-          <Form className="form-container">
-          <h1 className=" signup-h1">Signup</h1>
-            <FormikControl
-              control="input"
-              type="text"
-              label="Name"
-              name="name"
-              error={formik.errors.name}
-              touched={formik.touched.name}
-            />
-            <FormikControl
-              control="date"
-              label="Date of Birth"
-              name="birthDate"
-              error={formik.errors.birthDate}
-              touched={formik.touched.birthDate}
-            />
-            <FormikControl
-              control="input"
-              type="email"
-              label="Email"
-              name="email"
-              error={formik.errors.email}
-              touched={formik.touched.email}
-            />
-            <FormikControl
-              control="input"
-              type="password"
-              label="Password"
-              name="password"
-              error={formik.errors.password}
-              touched={formik.touched.password}
-            />
-            <FormikControl
-              control="input"
-              type="password"
-              label="Confirm Password"
-              name="confirmPassword"
-              error={formik.errors.confirmPassword}
-              touched={formik.touched.confirmPassword}
-            />
-            <FormikControl
-              control="checkbox"
-              label=""
-              name="licenseCheckbox"
-              options={licenseCheckbox}
-            />
-            <FormikControl
-              control="checkbox"
-              label=""
-              name="notificationsCheckbox"
-              options={notificationsCheckbox}
-            />
-            <Button
-              type="submit"
-              disabled={!(formik.isValid && formik.dirty)}
-              variant="primary"
-            >
-              Signup
-            </Button>{" "}
-          </Form>
-        </div>
-      )}
-    </Formik>
+    <div>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+      >
+        {(formik) => (
+          <div className="d-flex flex-row my-5">
+            <img src="./18915856.jpg" alt="" className="signup-img" />
+            <Form className="form-container">
+              <h1 className=" signup-h1">Signup</h1>
+              <FormikControl
+                control="input"
+                type="text"
+                label="Name"
+                name="name"
+                error={formik.errors.name}
+                touched={formik.touched.name}
+              />
+              <FormikControl
+                control="date"
+                label="Date of Birth"
+                name="birthDate"
+                error={formik.errors.birthDate}
+                touched={formik.touched.birthDate}
+              />
+              <FormikControl
+                control="input"
+                type="email"
+                label="Email"
+                name="email"
+                error={formik.errors.email}
+                touched={formik.touched.email}
+              />
+              <FormikControl
+                control="input"
+                type="password"
+                label="Password"
+                name="password"
+                error={formik.errors.password}
+                touched={formik.touched.password}
+              />
+              <FormikControl
+                control="input"
+                type="password"
+                label="Confirm Password"
+                name="confirmPassword"
+                error={formik.errors.confirmPassword}
+                touched={formik.touched.confirmPassword}
+              />
+              <FormikControl
+                control="checkbox"
+                label=""
+                name="licenseCheckbox"
+                options={licenseCheckbox}
+              />
+              <FormikControl
+                control="checkbox"
+                label=""
+                name="notificationsCheckbox"
+                options={notificationsCheckbox}
+              />
+              <Button
+                type="submit"
+                disabled={!(formik.isValid && formik.dirty)}
+                variant="primary"
+              >
+                Signup
+              </Button>{" "}
+            </Form>
+          </div>
+        )}
+      </Formik>
+      <Footer
+        link={
+          <a href="https://www.freepik.com/vectors/smart-people" style={{color: 'white'}}>
+            Smart people vector created by syarifahbrit - www.freepik.com
+          </a>
+        }
+      />
+    </div>
   );
 }
 

@@ -24,14 +24,14 @@
     rgba(0, 212, 255, 1) 100%
   );
   width: 100%;
-  height: 400px;
+  height: 60vh;
   display: block;
   position: relative;
 }
 
 .text-container {
   width: 60%;
-  height: calc(100vh - 250px);
+  height: fit-content;
   background-color: white;
   position: absolute;
   top: 150px;
@@ -133,7 +133,6 @@ label {
   width: 18%;
   margin-right: 10%;
   margin-left: 5%;
-
 }
 
 .signin-form-container {
@@ -160,10 +159,26 @@ label {
 }
 
 button:disabled,
-button[disabled]{
+button[disabled] {
   border: 1px solid #999999 !important;
   background-color: #cccccc !important;
   color: #666666 !important;
+}
+
+.line {
+  padding: 1rem;
+  background-color: #4374ac;
+  height: 100px;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #4374ac;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 @media (max-width: 850px) {
@@ -193,6 +208,7 @@ button[disabled]{
   .signin-img {
     width: 30%;
   }
+
 }
 
 @media (max-width: 500px) {
@@ -225,5 +241,8 @@ button[disabled]{
     width: 80%;
     margin-right: 10%;
     margin-left: 10%;
+  }
+  .footer {
+    display: none;
   }
 }
